@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shelter Management System</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2 class="text-muted">Shelter Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="/homepage">Home</a></li>
+                <li><a href="/sponsor">Sponsor</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form action="/sponsor/update" method="post">
+        Name:<br>
+        <input type="text" name="old_name"><br>
+        Surname:<br>
+        <input type="text" name="old_surname"><br>
+        New Name:<br>
+        <input type="text" name="new_name"><br>
+        New Surname:<br>
+        <input type="text" name="new_surname"><br>
+        New Phone:<br>
+        <input type="text" name="new_phone"><br>
+        <br>
+        <input type="submit" value="Update Sponsor">
+    </form>
+    {% if message %}
+    <p>{{message}}</p>
+    {% endif %}
+</div>
+</body>
+</html>

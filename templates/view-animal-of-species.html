@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shelter Management System</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2 class="text-muted">Shelter Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="/homepage">Home</a></li>
+                <li><a href="/animal">Animal</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form action="/animal/of-species" method="post">
+        Species:<br>
+        <input type="text" name="species"><br>
+        <br>
+        <input type="submit" value="View Animals of a Species">
+    </form>
+    {% if message %}
+    <p>{{message}}</p>
+    {% endif %}
+    {% if table %}
+    <ol>
+    {% for row in table %}
+        <li>
+        {% for data in row %}
+            {{data}}&nbsp;&nbsp;&nbsp;&nbsp;
+        {% endfor %}
+        </li>
+    {% endfor %}
+    </ol>
+    {% endif %}
+</div>
+</body>
+</html>

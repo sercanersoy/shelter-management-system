@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shelter Management System</title>
+</head>
+
+<body>
+<div class="container">
+    <div class="header">
+        <h2 class="text-muted">Shelter Management System</h2>
+        <nav>
+            <ul>
+                <li><a href="/homepage">Home</a></li>
+                <li><a href="/animal">Animal</a></li>
+            </ul>
+        </nav>
+    </div>
+    <form action="/animal/add" method="post">
+        Name:<br>
+        <input type="text" name="name"><br>
+        Age:<br>
+        <input type="number" name="age"><br>
+        Species:<br>
+        <input type="text" name="species"><br>
+        <br>
+        <input type="submit" value="Add Animal">
+    </form>
+    {% if message %}
+    <p>{{message}}</p>
+    {% endif %}
+</div>
+</body>
+</html>
